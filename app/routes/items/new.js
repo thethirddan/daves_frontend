@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    submit() {
-      let item = this.store.createRecord('item', {
-        name: this.get('name'),
-        description: this.get('description')
+    submit(item) {
+      console.log("itemgetname: ", item.get('name'));
+      let postitem = this.store.createRecord('item', {
+        name: item.get('name'),
+        description: item.get('description')
       });
 
       item.save().then(()=> {

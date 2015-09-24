@@ -1,8 +1,8 @@
 <h3>New Form</h3>
-<form class="" {{action 'submit' on='submit'}}>
+<form class="" {{action 'submit' this on='submit'}}>
 
-  {{input value=name placeholder="enter a name"}}
-  {{input value=description placeholder="enter a description"}}
+  {{input mut value=name placeholder="enter a name"}}
+  {{input mut value=description placeholder="enter a description"}}
 
   <button type="submit" name="button">Save</button>
 
