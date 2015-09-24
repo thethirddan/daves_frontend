@@ -1,0 +1,6 @@
+{{#if isEditable}}
+  {{input value=value}}
+  <button type="button" name="button" {{action 'save'}}>Save</button>
+{{else}}
+  {{value}}
+{{/if}}

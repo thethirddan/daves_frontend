@@ -1,0 +1,8 @@
+<ul>
+  {{#each model as |item|}}
+    <li>{{inline-edit value=item.name model=item action='saveItem'}}</li>
+  {{/each}}
+  <li>{{link-to "new item" "items.new"}}</li>
+</ul>
+
+{{outlet}}
